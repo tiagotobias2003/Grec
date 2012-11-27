@@ -1,7 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  data: 
+  data: 2012-11-24 12:13:45
+  professor: 
+  recurso: 
 
 two:
-  data: 
+  data: 2012-11-24 12:13:45
+  professor: 
+  recurso: 

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @recurso.nome %>
+</p>
+
+<p>
+  <b>Serial:</b>
+  <%= @recurso.serial %>
+</p>
+
+
+<%= link_to 'Edit', edit_recurso_path(@recurso) %> |
+<%= link_to 'Back', recursos_path %>

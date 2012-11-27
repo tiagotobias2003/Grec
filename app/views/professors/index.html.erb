@@ -1,0 +1,27 @@
+<h1>Lista de professores</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Email</th>
+    <th>Senha</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @professors.each do |professor| %>
+  <tr>
+    <td><%= professor.nome %></td>
+    <td><%= professor.email %></td>
+    <td><%= professor.senha %></td>
+    <td><%= link_to 'Show',  professor, class: "btn btn-success" %></td>
+    <td><%= link_to 'Editar',   edit_professor_path(professor), class: "btn btn-warning" %></td>
+    <td><%= link_to 'Destruir', professor, class: "btn btn-danger", confirm: 'Você tem certeza?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Novo Professor', new_professor_path, class: "btn" %>

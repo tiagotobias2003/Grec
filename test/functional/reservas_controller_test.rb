@@ -18,7 +18,7 @@ class ReservasControllerTest < ActionController::TestCase
 
   test "should create reserva" do
     assert_difference('Reserva.count') do
-      post :create, reserva: { data: @reserva.data }
+      post :create, reserva: @reserva.attributes
     end
 
     assert_redirected_to reserva_path(assigns(:reserva))
@@ -35,7 +35,7 @@ class ReservasControllerTest < ActionController::TestCase
   end
 
   test "should update reserva" do
-    put :update, id: @reserva, reserva: { data: @reserva.data }
+    put :update, id: @reserva, reserva: @reserva.attributes
     assert_redirected_to reserva_path(assigns(:reserva))
   end
 

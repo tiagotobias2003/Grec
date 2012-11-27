@@ -1,3 +1,5 @@
 class Reserva < ActiveRecord::Base
-  attr_accessible :data
+	belongs_to :professor
+	belongs_to :recurso
 end
+

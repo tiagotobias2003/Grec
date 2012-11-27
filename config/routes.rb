@@ -1,5 +1,11 @@
 Gerenciador::Application.routes.draw do
+  devise_for :professors 
+
   resources :reservas
+
+  resources :professors
+
+  resources :recursos
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -50,7 +56,7 @@ Gerenciador::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'reservas#index'
 
   # See how all your routes lay out with "rake routes"
 

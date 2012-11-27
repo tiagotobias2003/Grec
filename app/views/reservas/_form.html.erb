@@ -13,7 +13,15 @@
 
   <div class="field">
     <%= f.label :data %><br />
-    <%= f.text_field :data %>
+    <%= f.datetime_select :data %>
+  </div>
+  <div class="field">
+    <%= f.label :professor %><br />
+    <%= f.collection_select(:professor_id, Professor.order(:nome), :id, :nome, {:prompt => true }) %>
+  </div>
+  <div class="field">
+    <%= f.label :recurso %><br />
+    <%= f.collection_select(:recurso_id, Recurso.order(:nome), :id, :nome, {:prompt => true }) %>
   </div>
   <div class="actions">
     <%= f.submit %>
